@@ -25,6 +25,9 @@
 .cl-userButtonPopoverActions button{
   color: aliceblue;
 }
+.str-video__menu-container {
+  color: white;
+}
 
 .hero-background {
   background-image: url('/images/hero-background.png');
