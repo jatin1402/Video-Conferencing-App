@@ -43,6 +43,7 @@ const MeetingCard = ({
             <div className='flex relative w-full max-sm:hidden'>
                 {avatarImages.map((image, index) => {
                     return <Image 
+                        key={index}
                         src={image}
                         height={35}
                         width={35}

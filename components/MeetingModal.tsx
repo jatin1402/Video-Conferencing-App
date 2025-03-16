@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog"
 import { Button } from './ui/button'
 
@@ -7,8 +7,8 @@ interface MeetingModalProps {
     onClose: () => void,
     onButtonClick: () => void,
     title: string,
-    buttonText: string
-    children?: any
+    buttonText: string,
+    children?: ReactNode
 }
   
 

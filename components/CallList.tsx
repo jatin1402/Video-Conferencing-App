@@ -5,7 +5,6 @@ import MeetingCard from './MeetingCard'
 import { Call, CallRecording } from '@stream-io/video-react-sdk'
 import { useGetCallList } from '@/hooks/useGetCallList'
 import Loader from './Loader'
-import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
 const CallList = ({type} : {type : 'ended' | 'upcoming' | 'recorded'}) => {

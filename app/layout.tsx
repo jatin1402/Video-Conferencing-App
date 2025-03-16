@@ -6,7 +6,6 @@ import { Toaster } from "@/components/ui/sonner"
 
 import "@stream-io/video-react-sdk/dist/css/styles.css";
 import "react-datepicker/dist/react-datepicker.css";
-import Head from "next/head";
 
 
 const geistSans = Geist({

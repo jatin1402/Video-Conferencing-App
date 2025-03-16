@@ -24,7 +24,7 @@ const MeetingSetup = ({setIsSetupCompleted} : {setIsSetupCompleted : (value: boo
             call.camera.enable();
         }
 
-    }, [isMicCamToggle, call?.microphone, call.microphone, call.camera])
+    }, [isMicCamToggle, call.microphone, call.camera])
 
   return (
     <div className='flex-center w-full h-screen flex-col gap-3'>
