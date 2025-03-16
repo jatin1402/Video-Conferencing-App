@@ -21,7 +21,7 @@ const Meeting = () => {
 
   if(!call) return <div className='text-3xl text-white font-bold text-center'>Call Not Found</div>
 
-  const notAllowed = call.type === 'invited' && (!user || !call.state.members.find((m)=> {m.user_id === user.id}));
+  const notAllowed = call.type === 'invited' && (!user || !call.state.members.find((m) => m.user.id === user.id));
   if(notAllowed) return <div className='text-3xl text-white font-bold text-center'>You are not allowed to join the call</div>
 
   return (
