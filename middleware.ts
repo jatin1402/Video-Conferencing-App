@@ -1,4 +1,10 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
+
+const publicRoutes = [
+    '/sign-in*',
+    '/sign-up*'
+];
 
 const protectedRoutes = createRouteMatcher([
     '/',
@@ -10,8 +16,16 @@ const protectedRoutes = createRouteMatcher([
 ])
 
 export default clerkMiddleware(async (auth, req) => {
-    if(protectedRoutes(req)) await auth.protect();
-})
+    const isPublicRoute = publicRoutes.some(route => 
+        req.url.includes(route)
+    );
+
+    if (!isPublicRoute && protectedRoutes(req)) {
+        await auth.protect();
+    }
+
+    return NextResponse.next();
+});
 
 export const config = {
   matcher: [
